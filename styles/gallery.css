@@ -1,0 +1,255 @@
+/* gallery */
+ 
+h1{
+    margin: 1%;
+}
+
+.gallery{
+    display: grid;
+    width: 70%;
+    margin: 4% auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;    
+}
+
+.grid-item{
+    position: relative;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+.grid-item:hover {
+    box-shadow: 0 0 2px 1px #0da2ff;
+}
+
+.opening-img{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+.folder-title p{ 
+    text-align: center;
+    margin-bottom: 0;
+    color: black;
+}
+
+.grid-images{
+    margin: 0 6% 10% 6%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+}
+
+.grid-images .img{
+    float: left;
+    width: 12%;
+}
+
+.gallery-buttons{
+    margin: 2% auto;
+}
+
+.gallery-images{
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.gallery-images:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.popup {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+.popuptext {
+    width: 380px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 3px;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 500px;
+    margin: auto;
+    cursor: default;
+    font-size: 1.25rem;
+}
+  
+.confirm{
+    color: red;
+}
+
+.confirm:hover{
+    color: red;
+    font-weight: bold;
+}
+  
+.cancel{
+    cursor: pointer;
+    color: rgb(2, 175, 2);
+}
+
+.cancel:hover{
+    font-weight: bold;
+}
+
+.modal {
+    padding-top: 100px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+#caption {
+    margin: auto;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.folder-title{
+    text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+    .grid-images{
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .grid-images{
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .popuptext{
+        top: 150px;
+        left: 350px;
+    }
+    .close-modal{
+        right: 140px;
+    }
+    .opening-img{
+        height: 68%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .gallery {
+        width: 90%;
+    }
+    .grid-images{
+        margin: 0;
+    }
+    .gallery-images{
+        width: 120px;
+        height: 96px;
+    }
+    .close-modal{
+        right: 80px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .gallery {
+        width: 95%;
+    }
+    .popuptext{
+        top: 85px;
+        left: 280px;
+        font-size: 1.15rem;
+        width: 270px;
+    }
+    .close-modal{
+        right: 50px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .gallery {
+        width: 100%;
+    }
+    .grid-item{
+        padding-bottom: 15px;
+    }
+    .grid-images{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .opening-img{
+        height: 65%;
+    }
+}
+
+@media only screen and (max-width: 550px) { 
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery-images{
+        width: 90px;
+        height: 72px;
+    }
+    .gallery-buttons{
+        margin-left: 2%;
+    }
+    .popuptext{
+        position: inherit;
+    }
+    .close-modal{
+        right: 20px;
+    }
+    .opening-img{
+        height: 68%;
+    }
+}
+
+@media only screen and (max-width: 460px) { 
+    .close-modal{
+        right: 5px;
+    }
+}
+
+@media only screen and (max-width: 400px) { 
+    .grid-images{
+        gap: 10px;
+    }
+    .gallery-images{
+        width: 70px;
+        height: 56px;
+    }
+}

@@ -1,0 +1,193 @@
+/* contact */
+
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.info{
+    margin-left: 10%;
+    padding-top: 3%;
+    float: left;
+}
+
+.info h2{
+    padding: 0;
+    padding: 15px;
+    margin: 0;
+    min-width: 300px;
+}
+
+.info i{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: -50 px;
+}
+
+.map{
+    margin: 4% 8%;
+    float: right;
+}
+
+.map button{
+    margin: 0% 10% 4% 10%;
+}
+
+iframe {
+    float: right;
+    border-style: solid;
+    border-color: #9addfb;
+    border-width: 4px;
+    border-radius: 10px;
+    width: 465px;
+    height: 350px;
+}
+
+.gmap_canvas{
+    width: 465px !important;
+    height: 350px !important;
+}
+
+.gmap_canvas a{
+    display: none;
+}
+
+.info h2{
+    margin-left: 2%;
+}  
+
+.info address{
+  padding-left: 5%;
+  font-size: 20px;
+  width: 220px;
+}
+
+.office_hours h1{
+    margin: 3%;
+}
+
+.office_hours table{
+    width: 68%;
+    margin: 3% 5%;
+    font-size: 1.1rem;
+}
+
+.office_hours th, td{
+    text-align: center;
+    padding: 5px;
+    border-bottom: 1px solid #DDD;
+}
+
+.office_hours .day{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-success a{
+    color: white;
+}
+
+.office_hours .time:hover{
+    background-color: #9addfb; 
+}
+
+.edit-info{
+    margin-top: 4%; 
+}
+
+/* edit-map */
+
+.edit-map{
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-map .instructions{
+    margin-top: 3%;
+    margin-left: 10%; 
+    font-size: 1.1rem;   
+}
+
+.edit-map form{
+    margin-top: 3%;
+    margin-right: 10%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact{
+        display: flow-root;
+    }
+    .info{
+        float: none;
+    }
+    .map{
+        float: none;
+        margin: auto;
+        padding: 2%;
+        width: 60%;
+    }
+    .office_hours table{
+        width: 80%;
+    }
+    form{
+        width: 65%;
+    }
+    .edit-map .instructions {
+        margin-left: 1%;
+    }
+    .edit-map form{
+        margin-right: 1%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .map{
+        width: 80%;
+    }
+    .office_hours table{
+        width: 90%;
+        margin: 0;
+    }
+    .edit-map .instructions {
+        margin-left: 0;
+    }
+    .edit-map form{
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .map iframe{
+        width: 425px;
+        height: 320px;
+        float: left;
+    }
+    .edit-map{
+        display: block;
+    }
+    .mapouter{
+        height: 350px !important;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .map iframe{
+        width: 300px;
+        height: 225px;
+        float: left;
+    }
+    .office_hours table{
+        width: 100%;
+    }
+    .office_hours th td{
+        text-align: left;
+    }
+    .office_hours .day{
+        display: revert;
+    }
+    form{
+        width: 85%;
+    }
+}
+
